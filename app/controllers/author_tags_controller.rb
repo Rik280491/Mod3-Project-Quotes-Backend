@@ -1,0 +1,2 @@
+class AuthorTagsController < ApplicationController
+end
