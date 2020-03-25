@@ -5,4 +5,8 @@ class AuthorsController < ApplicationController
         render json: authors
     end
 
+    def show 
+        author = Author.find(params[:id])
+        render json: author
+    end
 end

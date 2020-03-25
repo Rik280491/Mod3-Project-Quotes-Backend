@@ -4,4 +4,13 @@ class QuotesController < ApplicationController
         quotes = Quote.all
         render json: quotes 
     end
+
+
+    def show 
+        quote = Quote.find(params[:id])
+        render json: quote, include: [:author]
+    end 
+
+
+
 end

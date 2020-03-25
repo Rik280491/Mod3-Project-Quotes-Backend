@@ -16,6 +16,16 @@ module Project
       end
     end
     # Initialize configuration defaults for originally generated Rails version.
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+          origins '*'
+          resource '*', headers: :any, methods: [:get, :post]
+      end
+    end
+    
+    
+    
+    
     config.load_defaults 6.0
 
     # Settings in config/environments/* take precedence over those specified here.
