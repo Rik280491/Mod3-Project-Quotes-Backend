@@ -15,8 +15,4 @@ class AuthorsController < ApplicationController
         render json: random_author, include: [:quotes] 
     end 
 
-
-
-
-
 end

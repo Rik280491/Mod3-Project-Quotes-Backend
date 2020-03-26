@@ -43,4 +43,10 @@ tag_c = Tag.create(name: "business")
 
 authorTag_a = AuthorTag.create(author: author_a, tag: tag_a)
 authorTag_b = AuthorTag.create(author: author_b, tag: tag_a)
+
 puts "Seeded"
+
+
+
+
+
