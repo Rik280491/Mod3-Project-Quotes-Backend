@@ -14,4 +14,5 @@ class AuthorsController < ApplicationController
         random_author = Author.all.sample 
         render json: random_author, include: [:quotes] 
     end 
+
 end

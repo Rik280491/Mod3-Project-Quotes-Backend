@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   # get '/random-author', to: 'authors#random_author', as: 'random_author'
 
   get '/start-game', to: 'games#start_game', as: 'start_game'
+  get '/get-rounds', to: 'games#get_rounds', as: 'get_rounds'
+
 
 end
