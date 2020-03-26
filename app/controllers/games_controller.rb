@@ -11,7 +11,4 @@ class GamesController < ApplicationController
         render json: [ quotes: random_quotes, authors: quote_author ]
         
     end 
-
-
-
 end
