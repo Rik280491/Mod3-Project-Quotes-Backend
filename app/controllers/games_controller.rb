@@ -1,5 +1,9 @@
 class GamesController < ApplicationController
 
+    def index
+        games = Game.all
+        render json: games, include: [:user]
+    end 
 
     def start_game 
         game = Game.new 
@@ -31,12 +35,12 @@ class GamesController < ApplicationController
     def create
         game = Game.create(game_params)
 
-        render json: game
+        render json: game, include: [:user]
     end
 
     private
 
     def game_params
-        params.permit(:username, :score, quote_ids: [])
+        params.require(:game).permit(:username, :score)
     end
 end

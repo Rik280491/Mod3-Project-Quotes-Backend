@@ -3,7 +3,7 @@ class Game < ApplicationRecord
   has_many :quote_games 
   has_many :quotes, through: :quote_games 
 
-  def username= (username)
+  def username=(username)
     self.user = User.find_or_create_by(name: username)
   end
 end
