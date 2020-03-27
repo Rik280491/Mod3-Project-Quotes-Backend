@@ -22,7 +22,7 @@ author_l = Author.create(name: "George W Bush", img_url: "https://upload.wikimed
 quote_a = Quote.create(content: "I’ve never really wanted to go to Japan. Simply because I don’t like eating fish. And I know that’s very popular out there in Africa.", author: author_a)
 quote_b = Quote.create(content: "So, where’s the Cannes Film Festival being held this year?" , author: author_b)
 quote_c = Quote.create(content: "The single most powerful word is the word ‘we’" , author: author_c)
-quote_d = Quote.create(content: "My greatest pain in life is that I will never be able to see muself perform live.", author: author_d)
+quote_d = Quote.create(content: "My greatest pain in life is that I will never be able to see myself perform live.", author: author_d)
 quote_e = Quote.create(content: "Visiting my mind is like visiting the Hermes factory. Shit is real.", author: author_d)
 quote_f = Quote.create(content: "I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle.", author: author_d)
 quote_g = Quote.create(content: "I am a proud non-reader of books.", author: author_d)
@@ -43,7 +43,16 @@ tag_c = Tag.create(name: "business")
 
 authorTag_a = AuthorTag.create(author: author_a, tag: tag_a)
 authorTag_b = AuthorTag.create(author: author_b, tag: tag_a)
+
+user_a = User.create(name: "Simon")
+user_b = User.create(name: "Rik")
+
+game_a = Game.create(score: 11, user_id: 1)
+game_b = Game.create(score: -1, user_id: 2)
+
 puts "Seeded"
+
+
 
 
 
