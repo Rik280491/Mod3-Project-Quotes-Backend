@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
     def index
-        games = Game.all
+        games = Game.all.sort{ |a, b| b.score <=> a.score }
         render json: games, include: [:user]
     end 
 
