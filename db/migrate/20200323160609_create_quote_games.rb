@@ -1,8 +1,8 @@
 class CreateQuoteGames < ActiveRecord::Migration[6.0]
   def change
     create_table :quote_games do |t|
-      t.references :game, null: false, foreign_key: true
-      t.references :quote, null: false, foreign_key: true
+      t.integer :game_id
+      t.integer :quote_id
 
       t.timestamps
     end
